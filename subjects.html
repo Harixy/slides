@@ -907,17 +907,14 @@ function buildTabs(){
         if(currentGrade===grade)
             tab.classList.add("active");
 
-     tab.innerText=
-            grade==="MDCAT"
-            ?"MDCAT"
-            :"Grade "+grade;
-
 
 
 tab.innerText=
             grade==="DIT"
             ?"DIT"
             :"Grade "+grade;
+
+if (grade === "MDCAT") tab.innerText = "MDCAT";
 
         tab.onclick=()=>{
 
