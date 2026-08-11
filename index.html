@@ -1,202 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Computer Science Resource Hub | HariX</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site moved · Redirecting</title>
+  <!-- automatic redirect after 3 seconds -->
+  <meta http-equiv="refresh" content="3;url=https://theorbitmkd.netlify.app">
+  <style>
+    /* ----- global reset & typography ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
-}
+    body {
+      background: linear-gradient(145deg, #f6f9fc 0%, #e6f0f5 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+      padding: 1.5rem;
+      margin: 0;
+    }
 
-body{
-    background:#f4f7fb;
-    color:#333;
-}
+    /* main card – clean, elevated, friendly */
+    .redirect-card {
+      max-width: 680px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border-radius: 56px;
+      padding: 3rem 2.5rem;
+      box-shadow: 0 20px 48px rgba(0, 20, 30, 0.12),
+                  0 8px 24px rgba(0, 0, 0, 0.05),
+                  inset 0 1px 0 rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      transition: transform 0.2s ease;
+      text-align: center;
+    }
 
-header{
-    background:linear-gradient(135deg,#0f172a,#2563eb);
-    color:white;
-    padding:50px 20px;
-    text-align:center;
-}
+    /* subtle hover lift */
+    .redirect-card:hover {
+      transform: scale(1.01);
+    }
 
-header h1{
-    font-size:2.5rem;
-    margin-bottom:10px;
-}
+    /* icon / emoji style */
+    .icon-big {
+      font-size: 4.8rem;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+      filter: drop-shadow(0 6px 12px rgba(0, 40, 60, 0.08));
+    }
 
-header p{
-    font-size:1.1rem;
-    opacity:.9;
-}
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #0b2b3d;
+      margin: 0.25rem 0 0.4rem 0;
+    }
 
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:40px 20px;
-}
+    .subhead {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #1f4b5e;
+      background: rgba(0, 80, 120, 0.04);
+      display: inline-block;
+      padding: 0.2rem 1.4rem;
+      border-radius: 60px;
+      backdrop-filter: blur(2px);
+      margin-bottom: 1.6rem;
+      border: 1px solid rgba(0, 70, 100, 0.06);
+    }
 
-.section-title{
-    text-align:center;
-    margin-bottom:30px;
-    color:#0f172a;
-}
+    .message-box {
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+      border-radius: 40px;
+      padding: 1.6rem 2rem;
+      margin: 1.6rem 0 2rem 0;
+      border: 1px solid rgba(0, 50, 70, 0.06);
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.02);
+    }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
+    .message-box p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #0a3345;
+      font-weight: 450;
+    }
 
-.card{
-    background:white;
-    border-radius:15px;
-    padding:25px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-    transition:.3s;
-}
+    .message-box strong {
+      font-weight: 600;
+      color: #005577;
+      background: rgba(0, 120, 180, 0.08);
+      padding: 0.1rem 0.6rem;
+      border-radius: 30px;
+      border: 1px solid rgba(0, 130, 200, 0.08);
+    }
 
-.card:hover{
-    transform:translateY(-8px);
-}
+    .new-url {
+      display: inline-block;
+      background: #0b2b3d;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 500;
+      padding: 0.6rem 2rem;
+      border-radius: 60px;
+      letter-spacing: 0.3px;
+      margin: 0.2rem 0 0.8rem 0;
+      box-shadow: 0 6px 14px rgba(0, 40, 60, 0.20);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      word-break: break-word;
+    }
 
-.card h3{
-    margin-bottom:15px;
-    color:#2563eb;
-}
+    .redirect-timer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      font-size: 1rem;
+      color: #1b4b5e;
+      background: rgba(0, 70, 100, 0.03);
+      padding: 0.5rem 1.2rem;
+      border-radius: 80px;
+      margin: 1.2rem auto 0.6rem auto;
+      width: fit-content;
+      border: 1px solid rgba(0, 80, 110, 0.06);
+      backdrop-filter: blur(2px);
+    }
 
-.card p{
-    color:#666;
-    margin-bottom:20px;
-}
+    .timer-number {
+      display: inline-block;
+      min-width: 2.4rem;
+      font-weight: 700;
+      font-size: 1.4rem;
+      background: #0b2b3d;
+      color: white;
+      padding: 0.1rem 0.2rem;
+      border-radius: 40px;
+      text-align: center;
+      line-height: 1.4;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
 
-.btn{
-    display:inline-block;
-    text-decoration:none;
-    background:#2563eb;
-    color:white;
-    padding:10px 18px;
-    border-radius:8px;
-    transition:.3s;
-}
+    .secondary-link {
+      margin-top: 1.8rem;
+      font-size: 0.95rem;
+    }
 
-.btn:hover{
-    background:#1d4ed8;
-}
+    .secondary-link a {
+      color: #006688;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 2px dotted rgba(0, 100, 140, 0.2);
+      transition: border-color 0.2s, color 0.2s;
+    }
 
-footer{
-    background:#0f172a;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:50px;
-}
+    .secondary-link a:hover {
+      color: #003b4f;
+      border-bottom-color: #006688;
+    }
 
-.subject-btn{
-    background:#16a34a;
-    font-size:1.05rem;
-    padding:12px 24px;
-}
+    /* small screen tweaks */
+    @media (max-width: 480px) {
+      .redirect-card {
+        padding: 2rem 1.2rem;
+        border-radius: 40px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .subhead {
+        font-size: 1rem;
+        padding: 0.2rem 1rem;
+      }
+      .message-box p {
+        font-size: 1rem;
+      }
+      .new-url {
+        font-size: 1rem;
+        padding: 0.4rem 1.2rem;
+      }
+      .icon-big {
+        font-size: 3.8rem;
+      }
+    }
 
-.subject-btn:hover{
-    background:#15803d;
-}
-    
-</style>
+    /* extra smoothness for the countdown */
+    .fade-transition {
+      transition: all 0.2s ease;
+    }
 
+    /* accessibility & reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-<h1>Computer Science Resource Hub</h1>
-<p>Created by <strong>HariX</strong></p>
-</header>
+<div class="redirect-card" role="main" aria-labelledby="redirect-heading">
+  <!-- icon -->
+  <div class="icon-big" aria-hidden="true">🚀</div>
 
-<div style="text-align:center; padding:25px;">
-    <a class="btn" href="subjects.html">
-        Other Subject Resources
-    </a>
-</div>
-    
-<div class="container">
+  <h1 id="redirect-heading">We’ve moved</h1>
+  <div class="subhead">✨ new home, same orbit</div>
 
-<h2 class="section-title">Study Resources</h2>
+  <div class="message-box">
+    <p>
+      This site has been <strong>shifted</strong> to a brand new address.<br>
+      You’ll be redirected automatically in a few seconds.
+    </p>
+  </div>
 
-<div class="grid">
+  <!-- new url display -->
+  <div class="new-url" aria-label="New website address">
+    theorbitmkd.netlify.app
+  </div>
 
-<div class="card">
-<h3>Grade 9</h3>
-<p>Computer Science Presentation</p>
-<a class="btn" href="https://docs.google.com/presentation/d/1WA3u3xtCD3SVtUEiL7zTxLKqJf2WcZRWp5V_gDTN2L8/edit?usp=drivesdk" target="_blank">Open Resource</a>
-</div>
+  <!-- countdown timer + manual fallback -->
+  <div class="redirect-timer">
+    <span>Redirecting in</span>
+    <span class="timer-number" id="countdownDisplay" aria-live="polite">3</span>
+    <span>seconds</span>
+  </div>
 
-<div class="card">
-<h3>Grade 10</h3>
-<p>Computer Science Presentation</p>
-<a class="btn" href="https://docs.google.com/presentation/d/1rC7K_8dTTmUsE9ITAwMIfkE8H-w22Y8mW19eDPG6BfQ/edit?usp=drivesdk" target="_blank">Open Resource</a>
-</div>
+  <div class="secondary-link">
+    <span>🔗 </span>
+    <a href="https://theorbitmkd.netlify.app" id="manualLink">click here if you’re not redirected</a>
+  </div>
 
-<div class="card">
-<h3>Grade 11</h3>
-<p>Computer Science Presentation</p>
-<a class="btn" href="https://docs.google.com/presentation/d/1rBWxzwoF3Igc8W0-fqbjLT46K7l--RE8T_ixHSTs4nQ/edit?usp=drivesdk" target="_blank">Open Resource</a>
-</div>
-
-<div class="card">
-<h3>Grade 12</h3>
-<p>Computer Science Presentation</p>
-<a class="btn" href="https://docs.google.com/presentation/d/1NqrGAtmxE5OauZfTUs_SiKz1O-VV7varVTjiOhBZZRo/edit?usp=drivesdk" target="_blank">Open Resource</a>
+  <!-- small note: the meta refresh handles the main redirect -->
+  <div style="margin-top: 1.2rem; font-size: 0.8rem; color: #3f6a7a; opacity: 0.7; border-top: 1px solid rgba(0,60,80,0.05); padding-top: 0.8rem;">
+    <span>⏳ automatic redirect · </span>
+    <span style="font-weight: 300;">if nothing happens, use the link above</span>
+  </div>
 </div>
 
-<div class="card">
-<h3>DIT Computer Network</h3>
-<p>Networking Course Slides</p>
-<a class="btn" href="https://docs.google.com/presentation/d/1QxiXnyvM1pYZ7ZCoXRod_TaRrKD4D1KdMAOgV3_AM1A/edit?usp=drivesdk" target="_blank">Open Resource</a>
-</div>
+<script>
+  (function() {
+    "use strict";
 
-<div class="card">
-<h3>DIT ICT</h3>
-<p>Information & Communication Technology</p>
-<a class="btn" href="https://docs.google.com/presentation/d/1xQ06PjlGDdbYyhax5WODCPMcp2UgAsj9Y81geRi1i2M/edit?usp=drivesdk" target="_blank">Open Resource</a>
-</div>
+    // ----- DOM refs -----
+    const countdownEl = document.getElementById('countdownDisplay');
+    const manualLink = document.getElementById('manualLink');
 
-<div class="card">
-<h3>DIT Operating System</h3>
-<p>Operating System Notes</p>
-<a class="btn" href="https://docs.google.com/presentation/d/1gzeXVPhB-Nv-01XDXVMtUllnz3abGZVWukbHlUmARVk/edit?usp=drivesdk" target="_blank">Open Resource</a>
-</div>
+    // ----- configuration -----
+    const TARGET_URL = 'https://theorbitmkd.netlify.app';
+    let secondsLeft = 3;           // matches meta refresh delay
+    const INTERVAL_MS = 1000;
 
-<div class="card">
-<h3>DIT Web Development</h3>
-<p>HTML, CSS & Web Development</p>
-<a class="btn" href="https://docs.google.com/presentation/d/1oI47VZmZ7qTg9v0vykQirs8ZNcRBYbmv2Kr-W7m50WU/edit?usp=drivesdk" target="_blank">Open Resource</a>
-</div>
+    // ----- helper: update the timer display -----
+    function updateTimerDisplay(value) {
+      if (countdownEl) {
+        countdownEl.textContent = value;
+        // small accessibility hint: announcement via aria-live (polite)
+      }
+    }
 
-<div class="card">
-<h3>DIT Database System</h3>
-<p>Database System Course</p>
-<a class="btn" href="https://docs.google.com/presentation/d/1shDxs8x1F8XdVlckhG72pQFNfzeHBLDhqE1-bni8_4g/edit?usp=drivesdk" target="_blank">Open Resource</a>
-</div>
+    // ----- countdown logic -----
+    let intervalId = null;
 
-<div class="card">
-<h3>Grade 9 Crash course</h3>
-<p>This is a complete Course covering all chapters</p>
-<a class="btn" href="https://docs.google.com/presentation/d/1sj_ZNSuB_z7_vASQ86xv-39kdBp6ac6Y2aWYoTCuqCQ/edit?usp=drivesdk" target="_blank">Open Resource</a>
-</div>
-    
-    
-</div>
+    function startCountdown() {
+      // clear any previous interval to avoid overlap
+      if (intervalId) {
+        clearInterval(intervalId);
+        intervalId = null;
+      }
 
-</div>
+      // set initial value (in case of any glitch)
+      updateTimerDisplay(secondsLeft);
 
-<footer>
-© 2026 Computer Science Resource Hub | Designed by HariX | Report any Issue on 03399898465 (Whatsapp)
-</footer>
+      intervalId = setInterval(function() {
+        secondsLeft -= 1;
+
+        if (secondsLeft <= 0) {
+          // countdown reached zero → clear interval and let meta refresh do the job
+          clearInterval(intervalId);
+          intervalId = null;
+          updateTimerDisplay(0);
+          // (optional) we could also trigger a redirect manually, but meta refresh already handles it.
+          // we keep this as a backup – but we don't want double redirect.
+          // meta refresh will fire at 3s. we just stop updating.
+          return;
+        }
+
+        updateTimerDisplay(secondsLeft);
+      }, INTERVAL_MS);
+    }
+
+    // ----- safety fallback: if meta refresh fails, click the link? -----
+    // we don't force a redirect here because meta refresh is standard.
+    // but we add a small extra: if the page somehow doesn't redirect after 5s,
+    // we could redirect manually. But we'll trust the meta refresh.
+    // however, we also add an extra backup: after 4.5 seconds, if the user hasn't been redirected,
+    // we can try to navigate. but to avoid double redirect, we set a one-time safety.
+    let safetyTimer = null;
+
+    function safetyRedirect() {
+      // if after 4.8 seconds we are still here, force redirect (only if not already redirected)
+      // but we need to check if the page is still active (it will be)
+      if (document.visibilityState !== 'hidden') {
+        // if the countdown is still running or we are still here, redirect manually.
+        // but we also check if we already redirected? we can use a flag.
+        if (!window._redirected) {
+          window._redirected = true;
+          window.location.replace(TARGET_URL);
+        }
+      }
+    }
+
+    // ----- init -----
+    function init() {
+      // start countdown
+      startCountdown();
+
+      // set a backup safety redirect (4.8s) – in case meta refresh is blocked or slow
+      safetyTimer = setTimeout(function() {
+        // if we are still here and countdown is not zero? (but likely zero)
+        // we can check if secondsLeft > 0, but we just force redirect.
+        // but we want to avoid conflict with meta refresh. 
+        // if meta refresh works, this will be cancelled because the page unloads.
+        // but if meta refresh fails, this will trigger.
+        if (document.visibilityState !== 'hidden') {
+          // only redirect if we haven't already (flag)
+          if (!window._redirected) {
+            window._redirected = true;
+            window.location.replace(TARGET_URL);
+          }
+        }
+      }, 4800); // 4.8 seconds
+
+      // also if the user clicks the manual link, we set the flag to avoid double redirect
+      if (manualLink) {
+        manualLink.addEventListener('click', function(e) {
+          // we don't need to prevent default, but we set the flag in case
+          window._redirected = true;
+          // let the link work normally
+        });
+      }
+
+      // clean up interval if page unloads (optional)
+      window.addEventListener('beforeunload', function() {
+        if (intervalId) {
+          clearInterval(intervalId);
+          intervalId = null;
+        }
+        if (safetyTimer) {
+          clearTimeout(safetyTimer);
+          safetyTimer = null;
+        }
+      });
+
+      // also if the page becomes hidden, we can clear timers to be safe
+      document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'hidden') {
+          if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = null;
+          }
+        }
+      });
+    }
+
+    // wait for DOM ready (though script at bottom, it's safe)
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+
+  })();
+</script>
 
 </body>
 </html>
